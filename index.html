@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nuestra música</title>
+<meta name="description" content="App de escritorio para Windows que mezcla la música de Spotify y de YouTube de dos personas en un solo mix.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20256%22%3E%3Ccircle%20cx%3D%22128%22%20cy%3D%22128%22%20r%3D%22124%22%20fill%3D%22%23241b16%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%233d2f26%22%20stroke-width%3D%222%22%3E%3Ccircle%20cx%3D%22128%22%20cy%3D%22128%22%20r%3D%22115%22%2F%3E%3Ccircle%20cx%3D%22128%22%20cy%3D%22128%22%20r%3D%22104%22%2F%3E%3Ccircle%20cx%3D%22128%22%20cy%3D%22128%22%20r%3D%2293%22%2F%3E%3Ccircle%20cx%3D%22128%22%20cy%3D%22128%22%20r%3D%2282%22%2F%3E%3Ccircle%20cx%3D%22128%22%20cy%3D%22128%22%20r%3D%2271%22%2F%3E%3Ccircle%20cx%3D%22128%22%20cy%3D%22128%22%20r%3D%2260%22%2F%3E%3C%2Fg%3E%3Cpath%20d%3D%22M60%2070A90%2090%200%200%201%20128%2038%22%20fill%3D%22none%22%20stroke%3D%22%236b5444%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%2F%3E%3Ccircle%20cx%3D%22128%22%20cy%3D%22128%22%20r%3D%2250%22%20fill%3D%22%23c8553d%22%20stroke%3D%22%23e0a526%22%20stroke-width%3D%224%22%2F%3E%3Cpath%20d%3D%22M128%20150C96%20128%20104%20102%20120%20106C125%20107%20127%20111%20128%20114C129%20111%20131%20107%20136%20106C152%20102%20160%20128%20128%20150Z%22%20fill%3D%22%23f3e9d8%22%2F%3E%3C%2Fsvg%3E">
+<style>
+  :root { --bg:#f3e9d8; --paper:#fbf5ea; --line:#e2d3bb; --text:#3b2a20; --muted:#8a7262; --accent:#c8553d; --olive:#5b7f3a; --brick:#b23a2b; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 'Segoe UI', system-ui, sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:48px 20px 64px; }
+  header { display:flex; align-items:center; gap:16px; margin-bottom:24px; }
+  header img { width:72px; height:72px; }
+  h1, h2 { font-family:Georgia, 'Palatino Linotype', serif; }
+  h1 { margin:0; font-size:40px; }
+  h2 { color:var(--accent); font-size:22px; margin:32px 0 8px; }
+  .lead { font-size:19px; margin:0 0 8px; }
+  .card { background:var(--paper); border:1px solid var(--line); border-radius:12px; padding:20px 24px; }
+  ul { padding-left:20px; }
+  li { margin:6px 0; }
+  .a { color:var(--olive); font-weight:600; } .b { color:var(--brick); font-weight:600; }
+  a { color:var(--accent); }
+  footer { margin-top:40px; padding-top:16px; border-top:1px dashed var(--line); color:var(--muted); font-size:14px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <svg width="72" height="72" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><circle cx="128" cy="128" r="124" fill="#241b16"/><g fill="none" stroke="#3d2f26" stroke-width="2"><circle cx="128" cy="128" r="115"/><circle cx="128" cy="128" r="104"/><circle cx="128" cy="128" r="93"/><circle cx="128" cy="128" r="82"/><circle cx="128" cy="128" r="71"/><circle cx="128" cy="128" r="60"/></g><path d="M60 70A90 90 0 0 1 128 38" fill="none" stroke="#6b5444" stroke-width="5" stroke-linecap="round"/><circle cx="128" cy="128" r="50" fill="#c8553d" stroke="#e0a526" stroke-width="4"/><path d="M128 150C96 128 104 102 120 106C125 107 127 111 128 114C129 111 131 107 136 106C152 102 160 128 128 150Z" fill="#f3e9d8"/></svg>
+    <div>
+      <h1>Nuestra música</h1>
+      <p class="muted" style="margin:0;color:var(--muted)">Lado A + Lado B</p>
+    </div>
+  </header>
+
+  <p class="lead">Una app de escritorio para Windows que junta la música de dos personas: una que escucha en <span class="a">Spotify</span> y otra que escucha en <span class="b">YouTube</span>.</p>
+
+  <div class="card">
+    <h2 style="margin-top:0">Qué hace</h2>
+    <ul>
+      <li><strong>Conecta las dos cuentas:</strong> muestra las playlists de Spotify y las listas de YouTube de cada uno.</li>
+      <li><strong>Arma el "Mix de los dos":</strong> combina lo que cada uno escucha más (lo más escuchado en Spotify y los videos de música marcados con "Me gusta" en YouTube) y le da más peso a lo que tienen en común.</li>
+      <li><strong>Filtra por géneros:</strong> cada canción tiene sus géneros (según Last.fm) y se pueden prender o apagar; también se puede quitar canción por canción.</li>
+      <li><strong>Lleva el mix a YouTube:</strong> busca en YouTube las canciones de Spotify y entrega un enlace para escuchar la lista, o la guarda como una playlist oculta llamada "Mix de los dos" en la cuenta de YouTube conectada.</li>
+    </ul>
+  </div>
+
+  <h2>Tu información</h2>
+  <p>La app funciona solo en tu computador: no tiene servidores propios, no vende ni comparte datos y no muestra publicidad. Las sesiones se guardan cifradas en tu PC y se pueden borrar en cualquier momento con el botón "Desconectar".</p>
+  <p><a href="privacidad.html"><strong>Política de privacidad de Nuestra música</strong></a></p>
+
+  <h2>Para quién es</h2>
+  <p>Es una app personal, hecha para uso privado de dos personas. No se vende ni se distribuye públicamente.</p>
+
+  <footer>
+    Nuestra música no está afiliada a Spotify, YouTube ni Google. Usa los Servicios de API de YouTube
+    (<a href="https://www.youtube.com/t/terms">Condiciones del Servicio de YouTube</a>) y la Web API de Spotify.
+    · <a href="privacidad.html">Política de privacidad</a>
+  </footer>
+</main>
+</body>
+</html>
